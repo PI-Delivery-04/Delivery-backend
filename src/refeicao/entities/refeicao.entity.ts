@@ -19,7 +19,7 @@ export class Refeicao {
 
     @IsNotEmpty()
     @Column({ type: 'decimal', precision: 6, scale: 2,nullable: false })
-    caloria: number;
+    preco: number;
 
     @Column({type: 'date'})
     datavalidade: string;
