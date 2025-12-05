@@ -35,4 +35,15 @@ async findAllByNome(nome: string): Promise<Refeicao[]>{
         }
     })
 }
+
+
+async findAllByCategoria(categoria: string): Promise<Refeicao[]>{
+    return await this.refeicaoRepository.find({
+        where: {
+            categoria: ILike (`%${categoria}%`)
+        }
+    });
+
+}  
+
 }

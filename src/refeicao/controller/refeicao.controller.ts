@@ -24,4 +24,11 @@ export class RefeicaoController {
     findByNome(@Param('nome') nome: string): Promise<Refeicao[]> {
         return this.refeicaoService.findAllByNome(nome);
     }
+
+        @Get(`/categoria/:categoria`)
+@HttpCode(HttpStatus.OK)
+findAllByCategoria(@Param(`categoria`) categoria: string): Promise<Refeicao[]>{
+    return this.refeicaoService.findAllByCategoria(categoria);
+}
+
 }
