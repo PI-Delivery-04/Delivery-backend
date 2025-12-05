@@ -11,12 +11,11 @@ import { RefeicaoModule } from './refeicao/refeicao.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'root',
+      password: 'r$4abWKj#456',
       database: 'db_delivery',
       entities: [Refeicao],
       synchronize: true,
       logging: true,
-
     }),
 
     RefeicaoModule,
@@ -24,4 +23,4 @@ import { RefeicaoModule } from './refeicao/refeicao.module';
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
