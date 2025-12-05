@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Refeicao } from './refeicao/entities/refeicao.entity';
-import { RefeicaoModule } from './refeicao/refeicao.module';
+import { Encomenda } from './encomenda/entities/encomenda.entity';
+import { EncomendaModule } from './encomenda/encomenda.module';
 
 
 @Module({
@@ -13,12 +13,12 @@ import { RefeicaoModule } from './refeicao/refeicao.module';
       username: 'root',
       password: 'r$4abWKj#456',
       database: 'db_delivery',
-      entities: [Refeicao],
+      entities: [Encomenda],
       synchronize: true,
       logging: true,
     }),
 
-    RefeicaoModule,
+    EncomendaModule,
   ],
   controllers: [],
   providers: [],
