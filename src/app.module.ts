@@ -11,7 +11,7 @@ import { RefeicaoModule } from './refeicao/refeicao.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'admin123',
+      password: 'root',
       database: 'db_delivery',
       entities: [Refeicao],
       synchronize: true,

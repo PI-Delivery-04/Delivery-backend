@@ -31,20 +31,3 @@ export class Refeicao {
 
 
 }
-
-
-/*
-
-
-
-  @Column("float")
-  calorias: number; 
-  // Número de calorias por porção
-
-  @Column()
-  expireDate: string; 
-  // Data de validade
-}
-
-
-*/
