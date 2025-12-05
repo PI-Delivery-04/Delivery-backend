@@ -29,20 +29,13 @@ export class RefeicaoService {
         return refeicao;
     }
 
-    async findAllByNome(nome: string): Promise<Refeicao[]> {
-        return await this.refeicaoRepository.find({
-            where: {
-                nome: ILike(`%${nome}%`)
-            }
-        })
-    }
-
     async findAllByCategoria(categoria: string): Promise<Refeicao[]> {
         return await this.refeicaoRepository.find({
             where: {
                 categoria: ILike(`%${categoria}%`)
             }
-        })
+        });
+
     }
 
     async create(refeicao: Refeicao): Promise<Refeicao> {
@@ -58,4 +51,14 @@ export class RefeicaoService {
         await this.findById(id)
         return await this.refeicaoRepository.delete(id)
     }
+
+    async findAllByNome(nome: string): Promise<Refeicao[]> {
+        return await this.refeicaoRepository.find({
+            where: {
+                nome: ILike(`%${nome}%`)
+            }
+        })
+    }
+
+
 }
